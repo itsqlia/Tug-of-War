@@ -40,7 +40,8 @@
   position: absolute;
   z-index: -1;
   margin-top: 18px;
-  margin-left: 4.5%;
+  margin-left: 4%;
+  width: 88%;
 }
 #person {
   margin-left: 1%;
@@ -65,8 +66,8 @@ h1 {
 }
 
 p {
-  margin-top:-10px;
   margin-left: 1%;
+  margin-top: -10px;
   font-family: Helvetica;
   font-style: italic;
   font-size: 14px;
