@@ -17,15 +17,9 @@ yearElem.addEventListener("keypress", (event) => {
   event.preventDefault();
 });
 function tugFields() {
-  console.log(
-    dateContainer.getBoundingClientRect().width,
-    document.documentElement.clientWidth,
-    dateContainer.getBoundingClientRect().right
-  );
   if (
     dateContainer.getBoundingClientRect().right <
-    document.documentElement.clientWidth -
-      document.documentElement.clientWidth * 0.1
+    document.documentElement.clientWidth * 0.9
   ) {
     dateContainer.style.left =
       dateContainer.getBoundingClientRect().left + 25 + "px";
