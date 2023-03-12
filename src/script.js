@@ -6,6 +6,8 @@ const yearElem = document.getElementById("year");
 
 const dateContainer = document.getElementById("dateContainer");
 
+const pullingCpu = document.getElementById("pullingCpu");
+
 const activationAreaElem = document.getElementById("activationArea");
 dayElem.addEventListener("keypress", (event) => {
   event.preventDefault();
@@ -19,12 +21,14 @@ yearElem.addEventListener("keypress", (event) => {
 function tugFields() {
   if (
     dateContainer.getBoundingClientRect().right <
-    document.documentElement.clientWidth * 0.9
+    document.documentElement.clientWidth * 0.89
   ) {
     dateContainer.style.left =
       dateContainer.getBoundingClientRect().left + 25 + "px";
     checkInputFieldPosition();
   }
+
+  pullingCpu.classList.toggle("pulling");
   setTimeout(tugFields, 1000);
 }
 
@@ -35,6 +39,17 @@ function tugFieldsBack() {
       (20 + Math.floor(Math.random() * 20)) +
       "px";
   checkInputFieldPosition();
+}
+
+function leadingZeros(input, maxLeadingZerosAmount) {
+  if (
+    input.value != null &&
+    input.value != "" &&
+    input.value.length <= maxLeadingZerosAmount
+  ) {
+    input.value =
+      "0".repeat(maxLeadingZerosAmount - input.value.length + 1) + input.value;
+  }
 }
 
 function checkInputFieldPosition() {

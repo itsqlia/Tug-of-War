@@ -13,6 +13,10 @@
   position: absolute;
 }
 
+#pullingCpu.pulling {
+  transform: translateX(10px) scaleX(-1);
+}
+
 #dateContainer {
   margin-top: 13px;
   width: 240px;

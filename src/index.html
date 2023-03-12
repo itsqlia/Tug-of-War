@@ -21,11 +21,11 @@
     <div id="ropeImage"></div>
 
     <div id="dateContainer">
-      <input type="number" min="1" max="31" class="inputField" id="day" name="Day" placeholder="DD"><br>
+      <input type="number" oninput="leadingZeros(this, 1)" onclick="leadingZeros(this, 1)" min="1" max="31" class="inputField" id="day" name="Day" placeholder="DD"><br>
 
-      <input type="number" min="1" max="12" class="inputField" id="month" name="Month" placeholder="MM"><br>
+      <input oninput="leadingZeros(this,1)" onclick="leadingZeros(this,1)" type="number" min="1" max="12" class="inputField" id="month" name="Month" placeholder="MM"><br>
 
-      <input type="number" min="0" max="2023" class="inputField" id="year" name="Year" placeholder="YYYY"><br>
+      <input oninput="leadingZeros(this,3)" onclick="leadingZeros(this,3)" type="number" min="0" max="2023" class="inputField" id="year" name="Year" placeholder="YYYY"><br>
 
     </div>
 
